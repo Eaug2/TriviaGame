@@ -1,0 +1,23 @@
+#start_container,
+#mid_game_container,
+#end_container{
+    text-align: center;
+    opacity:.85;
+
+}
+
+h4{
+    margin:20px;
+}
+.bg { 
+    /* The image used */
+    background-image: url("../images/MarioBackGround.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}  

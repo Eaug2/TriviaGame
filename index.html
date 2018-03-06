@@ -4,23 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Video Game Trivia</title>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel ="stylesheet" type = "text/css" href = "assets/css/style.css">
 </head>
 <body>
+    <div class ="bg">
+	<!-- Start Button -->
+	
+		<div class=" jumbotron jumbotron-fluid container" id = "start_container">
+
+			<h1 class = "display-4 logo"> Video Game Trivia</h1>
+
+			<button id = "start_button">Start</button>
+		</div>
+	
+
+		<!-- Gameplay  -->
+		<div class=" jumbotron jumbotron-fluid container" id = "mid_game_container">
+			
+			<h1 class = "display-4 logo"> Video Game Trivia!</h1>
+
+			<!-- Game Timer -->
+			<h3 id = "timer_line">Time Remaining: <span id = "timer_number">120 Seconds</span></h3>
+
+			<!-- Questions -->
+
+			<h4>What's the number one selling N64 game? </h4>
+			<!-- Super Mario 64 -->
+				<input type="radio" name="q1" value="Super Mario 64">Super Mario 64
+				<input type="radio" name="q1" value="Golden Eye 007">Golden Eye 007
+				<input type="radio" name="q1" value="The Legend of Zelda: Ocarina of Time">The Legend of Zelda: Ocarina of Time
+				<input type="radio" name="q1" value="Mario Kart 64">Mario Kart 64
+				
+
+			<h4>Which game console has the most units sold?</h4>
+			<!-- PlayStation 2 -->
+				<input type="radio" name="q2" value="Xbox 360">Xbox 360
+				<input type="radio" name="q2" value="Wii">Wii
+				<input type="radio" name="q2" value="PlayStation 2">PlayStation 2
+				<input type="radio" name="q2" value="">Nintendo DS
+
+
+
+			<h4>From IGN's Top 100 RPG games who holds the number one spot?</h4>
+			<!-- Chrono Trigger -->
+				<input type="radio" name="q3" value="Diablo II ">Diablo II 
+				<input type="radio" name="q3" value="Chrono Trigger">Chrono Trigger
+				<input type="radio" name="q3" value="Pokemon Yellow">Pokemon Yellow
+				<input type="radio" name="q3" value="World Of Warcraft ">World Of Warcraft 
+
+
+			<h4>Which one of these Movies based off of a video games holds the highest Rotten Tomatoes score at a whopping 36%?</h4>
+			<!-- Prince of Persia: The Sands of Time -->
+				<input type="radio" name="q4" value="Resident Evil">Resident Evil
+				<input type="radio" name="q4" value="Mortal Kombat">Mortal Kombat
+				<input type="radio" name="q4" value="Prince of Persia: The Sands of Time">Prince of Persia: The Sands of Time
+				<input type="radio" name="q4" value="Warcraft">Warcraft
+				<input type="radio" name="q4" value="Super Mario Bros.">Super Mario Bros.
+
+
+			<h4>The Cake is a Lie. Is helpful advise from what game?</h4>
+			<!-- Portal -->
+				<input type="radio" name="q5" value="">Hungry Hungry Hippos
+				<input type="radio" name="q5" value="Portal">Portal
+				<input type="radio" name="q5" value="Ace of Cakes">Ace of Cakes
+				<input type="radio" name="q5" value="Bioshock">Bioshock
+			
+			<h4>Who is the most famous video game character of all time?</h4>
+			<!-- Mario  -->
+				<input type="radio" name="q6" value="Link">Link
+				<input type="radio" name="q6" value="Donkey Kong">Donkey Kong
+				<input type="radio" name="q6" value="Sonic">Sonic
+				<input type="radio" name="q6" value="Star Fox">Star Fox
+				<input type="radio" name="q6" value="Mario">Mario
+				
+
+			<h4>How many rows of aliens are there usually at the start of Space Invaders</h4>
+			<!-- Five  -->
+				<input type="radio" name="q7" value="Six">Six
+				<input type="radio" name="q7" value="Five">Five
+				<input type="radio" name="q7" value="Four">Four
+				
+				
+
+			<h4>Which one of these isn't a Pac-Man ghost?</h4>
+			<!-- Winky -->
+				<input type="radio" name="q8" value="Blinky">Blinky
+				<input type="radio" name="q8" value="Pinky">Pinky
+				<input type="radio" name="q8" value="Winky">Winky
+				<input type="radio" name="q8" value="Clyde">Clyde
+				<input type="radio" name="q8" value="Inky">Inky 
+
+			<h4>What holds the title as the First MOBA game?</h4>
+			<!-- Aeon Of Strife -->
+				<input type="radio" name="q9" value="DOTA">Defense of the Ancients (DOTA)
+				<input type="radio" name="q9" value="Aeon Of Strife">Aeon Of Strife
+				<input type="radio" name="q9" value="League of Legends">League Of Legends
+				<input type="radio" name="q9" value="Heros of the Storm">Heros of the Storm
+				<input type="radio" name="q9" value="Smite">Smite
+				
+
+			<h4>Blanka, Zangief and Ken are all characters from what fighting game?</h4>
+			<!-- Street Fighter -->
+				<input type="radio" name="q10" value="Mortal Kombat">Mortal Kombat
+				<input type="radio" name="q10" value="Tekkan">Tekkan
+				<input type="radio" name="q10" value="Street Fighter">Street Fighter
+				<input type="radio" name="q10" value="Virtual Fighter">Virtual Fighter
+				<input type="radio" name="q10" value="Soulcalibur">Soulcalibur
+				
+
+
+				<br>
+
+
+			<button id = "done_button">Done!</button>
+
+		</div>
+
+
+
+
+		<!-- Score Screen -->
+		<div class=" jumbotron jumbotron-fluid container" id = "end_container">
+			
+			<h1 class = "display-4 logo">Video Game Trivia</h1>
+
+			<h1 id = "done">Game Over!</h1>
+			<br>
+
+			<h2>Correct Answers: <span id = "correct_answers">0</span></h2>
+			<h2>Incorrect Answers: <span id = "wrong_answers">0</span></h2>
+			<h2>Unanswered: <span id = "unanswered">0</span></h2>
+		</div>
+	</div>
+
+
+
+
+
+
+
     
 
-
-
-
-
-
-
-
-    
-    
     <script src = "assets/javascript/app.js"></script>
 </body>
 </html>
