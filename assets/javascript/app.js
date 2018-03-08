@@ -8,9 +8,9 @@ var unansweredCount = 0;
 
 
 //Ready
-$(document).ready(function(){
+$(document).ready(function () {
 
-	
+
 	$("#mid_game_container").hide();
 	$("#end_container").hide();
 	window.scrollTo(0, 500);
@@ -18,9 +18,9 @@ $(document).ready(function(){
 
 
 
-	$("#start_button").on("click", function(){
+	$("#start_button").on("click", function () {
 
-		
+
 		$("#start_container").hide();
 		$("#mid_game_container").show();
 		startCountdown();
@@ -31,26 +31,26 @@ $(document).ready(function(){
 
 
 	//Countdown
-	function countdown(){
+	function countdown() {
 		count--;
 
-    	$('#timer_number').html(count + " Seconds");
+		$('#timer_number').html(count + " Seconds");
 
-			$("#done_button").on("click", function(){
-                
-			count = 0; 
+		$("#done_button").on("click", function () {
+
+			count = 0;
 			return;
-			});
+		});
 
-			if(count == -1){
-				timeUp();
-				$("#mid_game_container").hide();
-			}
+		if (count == -1) {
+			timeUp();
+			$("#mid_game_container").hide();
+		}
 	}
 
 
 	//Start
-	function startCountdown(){
+	function startCountdown() {
 
 		setInterval(countdown, 1000);
 
@@ -58,10 +58,10 @@ $(document).ready(function(){
 
 
 	// Game Time is Up
-	function timeUp(){
+	function timeUp() {
 
 
-		
+
 		var Q1 = $('input:radio[name="q1"]:checked').val();
 		var Q2 = $('input:radio[name="q2"]:checked').val();
 		var Q3 = $('input:radio[name="q3"]:checked').val();
@@ -75,114 +75,114 @@ $(document).ready(function(){
 
 
 
-		
-		if(Q1 == undefined){
+
+		if (Q1 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q1 == "Super Mario 64"){
+		else if (Q1 == "Super Mario 64") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q2 == undefined){
+		if (Q2 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q2 == "PlayStation 2"){
+		else if (Q2 == "PlayStation 2") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q3 == undefined){
+		if (Q3 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q3 == "Chrono Trigger"){
+		else if (Q3 == "Chrono Trigger") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q4 == undefined){
+		if (Q4 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q4 == "Prince of Persia: The Sands of Time"){
+		else if (Q4 == "Prince of Persia: The Sands of Time") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q5 == undefined){
+		if (Q5 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q5 == "Portal"){
+		else if (Q5 == "Portal") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q6 == undefined){
+		if (Q6 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q6 == "Mario"){
+		else if (Q6 == "Mario") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q7 == undefined){
+		if (Q7 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q7 == "Five"){
+		else if (Q7 == "Five") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q8 == undefined){
+		if (Q8 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q8 == "Winky"){
+		else if (Q8 == "Winky") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
-		if(Q9 == undefined){
+		if (Q9 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q9 == "Aeon Of Strife"){
+		else if (Q9 == "Aeon Of Strife") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
 
 
-		if(Q10 == undefined){
+		if (Q10 == undefined) {
 			unansweredCount++;
 		}
-		else if(Q10 == "Street Fighter"){
+		else if (Q10 == "Street Fighter") {
 			correctCount++;
 		}
-		else{
+		else {
 			wrongCount++;
 		}
 
@@ -193,7 +193,7 @@ $(document).ready(function(){
 		$('#correct_answers').html(correctCount);
 		$('#wrong_answers').html(wrongCount);
 		$('#unanswered').html(unansweredCount);
-		
+
 		$("#end_container").show();
 		window.scrollTo(0, 550);
 
